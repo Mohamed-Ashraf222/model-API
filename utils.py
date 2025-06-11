@@ -6,8 +6,8 @@ import tensorflow as tf
 
 def preprocess_image(image, target_size=(224, 224), brightness_factor=1.3):
     """
-    Preprocess image for VGG16 model input
-    Uses VGG16-specific preprocessing
+    Preprocess image for VGG19 model input
+    Uses VGG19-specific preprocessing
     """
     # Convert PIL image to numpy array
     if isinstance(image, Image.Image):
@@ -16,8 +16,8 @@ def preprocess_image(image, target_size=(224, 224), brightness_factor=1.3):
     # Resize image
     image = np.clip(image.astype(np.float32) * brightness_factor, 0, 255).astype(np.uint8)
     image = cv2.resize(image, target_size)
-    
-    # VGG16 preprocessing 
+
+    # VGG19 preprocessing
     try:
 
         from tensorflow.keras.applications.vgg16 import preprocess_input

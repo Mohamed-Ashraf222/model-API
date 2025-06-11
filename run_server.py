@@ -4,7 +4,7 @@ Run script for the deep learning classification API server
 from app import app
 
 if __name__ == "__main__":
-    print("Starting VGG16 Classification API server...")
+    print("Starting VGG19 Classification API server...")
     print("API will be available at: http://localhost:5000")
     print("Available endpoints:")
     print(" - GET /health - Health check")
